@@ -1,22 +1,22 @@
 export const ProjectData = [
+  // {
+  // title: "",
+  // id: 0,
+  // mediaList: [
+  //   {
+  //     type: "image",
+  //     url: "",
+  //     caption: "",
+  //   },
+  // ],
+  // longDescription: "",
+  // links: "",
+  // technologies: [],
+  // thumbnail: "",
+  // shortDescription: "",
+  // },
   {
-    // title: "",
-    // id: 0,
-    // mediaList: [
-    //   {
-    //     type: "image",
-    //     url: "",
-    //     caption: "",
-    //   },
-    // ],
-    // longDescription: "",
-    // links: "",
-    // technologies: [],
-    // thumbnail: "",
-    // shortDescription: "",
-  },
-  {
-    title: "",
+    title: "chat. - Messaging App",
     id: 1,
     mediaList: [
       {
@@ -25,14 +25,16 @@ export const ProjectData = [
         caption: "",
       },
     ],
-    longDescription: "",
-    links: "",
-    technologies: [],
+    longDescription:
+      "Messaging App made with JavaScript + React, using Firebase Cloud Firestore for User Authentication, and managing the database. Users are able to send friend requests to other users via their email, which will send a real-time notification to the reciever allowing them to accept or ignore the friend request. Global and Direct messaging are supported through configuring the Firebase Cloud Firestore database to store all messages and user information. Incorporated Firebase Auth for account creation, sign-in, and password resetting capabilities through email. Users can choose to sign up with Google or create their own account with an email and password.",
+    links: "https://github.com/PalmerCurrie",
+    technologies: ["React", "JavaScript", "Firebase"],
     thumbnail: "",
-    shortDescription: "",
+    shortDescription:
+      "A messaging app with real-time global and direct messaging, and friend requests",
   },
   {
-    title: "",
+    title: "Shopping Cart",
     id: 2,
     mediaList: [
       {
@@ -42,13 +44,13 @@ export const ProjectData = [
       },
     ],
     longDescription: "",
-    links: "",
-    technologies: [],
+    links: "https://palmercurrie-shopping-cart.netlify.app/",
+    technologies: ["React", "JavaScript", "Vite"],
     thumbnail: "",
-    shortDescription: "",
+    shortDescription: "A Shopping-Cart made with the Fake Store API",
   },
   {
-    title: "",
+    title: "NBA Wordle",
     id: 3,
     mediaList: [
       {
@@ -58,9 +60,9 @@ export const ProjectData = [
       },
     ],
     longDescription: "",
-    links: "",
-    technologies: [],
+    links: "https://palmercurrie-nba-wordle.netlify.app/",
+    technologies: ["React", "JavaScript"],
     thumbnail: "",
-    shortDescription: "",
+    shortDescription: "NBA Wordle made with the BALLDONTLIE API",
   },
 ];

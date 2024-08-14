@@ -1,0 +1,20 @@
+.project-showcase {
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* For Phones and Smaller Screens */
+@media (max-width: 768px) {
+  .project-showcase {
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

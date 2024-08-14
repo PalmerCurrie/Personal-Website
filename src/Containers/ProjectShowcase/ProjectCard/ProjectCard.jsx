@@ -1,10 +1,26 @@
 import "./ProjectCard.css";
 
-function ProjectCard() {
+function ProjectCard({ project, selectedProject, setSelectedProject }) {
+  if (!project) {
+    return null;
+  }
+
   return (
-    <div className="container">
-      <h2> Project Name </h2>
-      <p> Project Description...</p>
+    <div className="project-card-container">
+      <div className="project-image">
+        <img src={project.thumbnail} />
+      </div>
+      <div className="project-content">
+        <h2>{project.title} </h2>
+        <p> {project.shortDescription} </p>
+        <div className="project-technologies">
+          {project.technologies.map((technology, index) => (
+            <div key={index} className="technology">
+              {technology}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
