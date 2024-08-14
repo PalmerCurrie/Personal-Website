@@ -5,23 +5,23 @@ import PersonalProfile from "./Containers/PersonalProfile/PersonalProfile.jsx";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [theme, setTheme] = useState(false);
 
   useEffect(() => {
-    if (darkMode) {
+    if (theme) {
       document.body.classList.add("dark-mode");
     } else {
       document.body.classList.remove("dark-mode");
     }
-  }, [darkMode]);
+  }, [theme]);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+  const toggleTheme = () => {
+    setTheme(!theme);
   };
 
   return (
     <div className="App">
-      <Header onToggleTheme={toggleDarkMode} />
+      <Header theme={theme} onToggleTheme={toggleTheme} />
       <PersonalProfile />
       <ProjectShowcase />
     </div>
