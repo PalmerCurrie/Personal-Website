@@ -1,9 +1,14 @@
 import "./Header.css";
 
-function Header() {
+function Header({ onToggleTheme }) {
+  const handleThemeClick = () => {
+    onToggleTheme();
+  };
+
   return (
-    <div className="container">
+    <div className="header-container">
       <h1>Hello Header!</h1>
+      <button onClick={handleThemeClick}>Toggle Dark Mode</button>
     </div>
   );
 }
