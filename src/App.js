@@ -21,11 +21,13 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <Header theme={theme} onToggleTheme={toggleTheme} />
-      <PersonalProfile />
-      <ProjectShowcase />
-      <Contact />
+      <div className="app-content">
+        <PersonalProfile />
+        <ProjectShowcase />
+        <Contact />
+      </div>
     </div>
   );
 }
