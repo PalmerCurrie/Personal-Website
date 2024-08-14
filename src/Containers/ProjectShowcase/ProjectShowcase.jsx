@@ -19,7 +19,6 @@ function ProjectShowcase() {
           />
         ))}
       </div>
-      <ProjectCard />
     </div>
   );
 }
