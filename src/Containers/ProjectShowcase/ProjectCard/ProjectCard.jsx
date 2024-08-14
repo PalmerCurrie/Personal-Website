@@ -1,12 +1,21 @@
 import "./ProjectCard.css";
 
 function ProjectCard({ project, selectedProject, setSelectedProject }) {
-  if (!project) {
+  if (!project || !selectedProject) {
     return null;
   }
 
+  const isSelected = selectedProject.id === project.id;
+
+  const handleProjectClick = () => {
+    setSelectedProject(project);
+  };
+
   return (
-    <div className="project-card-container">
+    <div
+      onClick={handleProjectClick}
+      className={`project-card-container ${isSelected ? "selected" : ""}`}
+    >
       <div className="project-image">
         <img src={project.thumbnail} />
       </div>

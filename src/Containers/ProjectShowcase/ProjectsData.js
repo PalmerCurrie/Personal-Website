@@ -16,7 +16,7 @@ export const ProjectData = [
   // shortDescription: "",
   // },
   {
-    title: "chat. - Messaging App",
+    title: "Messaging App",
     id: 1,
     mediaList: [
       {

@@ -1,15 +1,20 @@
 .project-card-container {
+  border: 5px solid var(--background-color);
   background-color: var(--secondary-background-color);
   width: 30vw;
   height: 60vh;
+  border-radius: 15px;
 }
 
-.project-card-container .selected {
-  border: 25px;
+.project-card-container.selected {
   border-color: var(--primary-color);
+  border-radius: 15px;
+  z-index: 1000;
 }
 
 .project-image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-color: grey;
   height: 50%;
 }
