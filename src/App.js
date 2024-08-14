@@ -2,10 +2,11 @@ import "./App.css";
 import Header from "./Components/Header/Header.jsx";
 import ProjectShowcase from "./Containers/ProjectShowcase/ProjectShowcase.jsx";
 import PersonalProfile from "./Containers/PersonalProfile/PersonalProfile.jsx";
+import Contact from "./Containers/Contact/Contact.jsx";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(true);
 
   useEffect(() => {
     if (theme) {
@@ -24,6 +25,7 @@ function App() {
       <Header theme={theme} onToggleTheme={toggleTheme} />
       <PersonalProfile />
       <ProjectShowcase />
+      <Contact />
     </div>
   );
 }

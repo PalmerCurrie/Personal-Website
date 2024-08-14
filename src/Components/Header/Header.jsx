@@ -1,4 +1,5 @@
 import "./Header.css";
+import SocialLink from "../SocialLink/SocialLink";
 
 function Header({ theme, onToggleTheme }) {
   const handleThemeClick = () => {
@@ -9,6 +10,21 @@ function Header({ theme, onToggleTheme }) {
     <div className="header-container">
       <div className="name-container">
         <p>Palmer Currie</p>
+      </div>
+      <div className="social-container">
+        {/* SocialLink takes in Icon and Link */}
+        <SocialLink
+          icon={<img src="github.svg" alt="GitHub" />}
+          link="https://github.com/PalmerCurrie"
+        />
+        <SocialLink
+          icon={<img src="linkedin.svg" alt="LinkedIn" />}
+          link="https://www.linkedin.com/in/palmercurrie/"
+        />
+        <SocialLink
+          icon={<img src="email.svg" alt="Email" />}
+          link="mailto:palmercurrie@gmail.com"
+        />
       </div>
       <div className="nav-container">
         <button onClick={handleThemeClick}>
