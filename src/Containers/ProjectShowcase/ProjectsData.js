@@ -21,8 +21,20 @@ export const ProjectData = [
     mediaList: [
       {
         type: "image",
-        url: "",
-        caption: "",
+        url: "/MessagingApp/MessagingAppChatroom.png",
+        caption: "The Chatroom for the Messaging App in a Dark theme.",
+      },
+      {
+        type: "image",
+        url: "/MessagingApp/MessagingAppUserProfile.png",
+        caption:
+          "The User Profile page allowing users to select a custom display name, or reset their password via email.",
+      },
+      {
+        type: "image",
+        url: "/MessagingApp/MessagingAppDirectMessage.png",
+        caption:
+          "Direct Messaging to a friend through sending a friend request via the users email.",
       },
     ],
     longDescription:
@@ -39,14 +51,31 @@ export const ProjectData = [
     mediaList: [
       {
         type: "image",
-        url: "",
-        caption: "",
+        url: "/ShoppingCart/ShopPage.png",
+        caption:
+          "The Shopping page, allowing users to select which items they want, and filter based on category.",
+      },
+      {
+        type: "image",
+        url: "/ShoppingCart/CheckoutPage.png",
+        caption:
+          "Checkout Page with a full cart, allowing users to adjust item quantities, remove items from the cart, or complete their purchase",
+      },
+      {
+        type: "image",
+        url: "/ShoppingCart/LandingPage.png",
+        caption: "Landing page, welcoming users to the store.",
+      },
+      {
+        type: "image",
+        url: "/ShoppingCart/EmptyCheckoutPage.png",
+        caption: "The checkout page when no items are placed into the cart.",
       },
     ],
     longDescription: "",
     links: "https://palmercurrie-shopping-cart.netlify.app/",
     technologies: ["React", "JavaScript", "Vite"],
-    thumbnail: "",
+    thumbnail: "/ShoppingCart/CheckoutPage.png",
     shortDescription: "A Shopping-Cart made with the Fake Store API",
   },
   {
@@ -55,14 +84,21 @@ export const ProjectData = [
     mediaList: [
       {
         type: "image",
-        url: "",
-        caption: "",
+        url: "/NBAWordle/GamePage.png",
+        caption:
+          "The Game Page of NBA Wordle, users can guess players and recieve responsive feedback based on the guessed players attributes.",
+      },
+      {
+        type: "image",
+        url: "/NBAWordle/HomePage.png",
+        caption:
+          "Home Page of NBA Wordle displaying information about the game, and how to play it.",
       },
     ],
     longDescription: "",
     links: "https://palmercurrie-nba-wordle.netlify.app/",
     technologies: ["React", "JavaScript"],
-    thumbnail: "",
+    thumbnail: "/NBAWordle/GamePage.png",
     shortDescription: "NBA Wordle made with the BALLDONTLIE API",
   },
 ];

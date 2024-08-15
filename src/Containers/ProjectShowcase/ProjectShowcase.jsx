@@ -1,11 +1,8 @@
 import "./ProjectShowcase.css";
 import ProjectCard from "./ProjectCard/ProjectCard.jsx";
 import { ProjectData } from "./ProjectsData.js";
-import { useState } from "react";
 
-function ProjectShowcase() {
-  const [selectedProject, setSelectedProject] = useState(ProjectData[0]);
-
+function ProjectShowcase({ selectedProject, setSelectedProject }) {
   return (
     <div className="project-showcase">
       <h1>Projects</h1>

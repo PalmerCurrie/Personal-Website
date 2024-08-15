@@ -16,8 +16,12 @@ function ProjectCard({ project, selectedProject, setSelectedProject }) {
       onClick={handleProjectClick}
       className={`project-card-container ${isSelected ? "selected" : ""}`}
     >
-      <div className="project-image">
-        <img src={project.thumbnail} alt={project.title} />
+      <div className="project-image-container">
+        <img
+          src={project.thumbnail}
+          alt={project.title}
+          className="project-image"
+        />
       </div>
       <div className="project-content">
         <h2>{project.title} </h2>

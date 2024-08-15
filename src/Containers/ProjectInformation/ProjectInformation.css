@@ -1,0 +1,22 @@
+.project-information-container {
+  height: 50vh;
+  width: 80vw;
+  background-color: var(--secondary-background-color);
+}
+
+.image-container {
+}
+
+.image {
+  width: 20%;
+  height: 20%;
+}
+
+.project-information {
+}
+
+.project-technologies {
+}
+
+.technology {
+}
