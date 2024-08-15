@@ -1,3 +1,4 @@
+import Technology from "../../../Components/Technology/Technology";
 import "./ProjectCard.css";
 
 function ProjectCard({ project, selectedProject, setSelectedProject }) {
@@ -28,9 +29,7 @@ function ProjectCard({ project, selectedProject, setSelectedProject }) {
         <p> {project.shortDescription} </p>
         <div className="project-technologies">
           {project.technologies.map((technology, index) => (
-            <div key={index} className="technology">
-              {technology}
-            </div>
+            <Technology text={technology} />
           ))}
         </div>
       </div>

@@ -1,0 +1,30 @@
+.technology {
+  padding: 1.25vh;
+  border-radius: 25px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1vw;
+}
+
+/* For screen widths between 600px and 800px */
+@media (min-width: 600px) and (max-width: 800px) {
+  .technology {
+    padding: 3%;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 2.5vw; /* Slightly reduced font size */
+  }
+}
+
+/* Screens such as phone screens */
+
+@media (max-width: 600px) {
+  .technology {
+    padding: 3%;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 2.5vw; /* Slightly reduced font size */
+  }
+}

@@ -3,16 +3,15 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   width: 75vw;
   height: 55vh;
   background-color: var(--secondary-background-color);
-  border-radius: 50px;
-  padding: 5%;
+  border-radius: 40px;
+  padding: 2.5%;
 }
 
 .left-column {
-  width: 70%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -21,17 +20,17 @@
 }
 
 .right-column {
-  width: 30%;
+  width: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .profile-picture-container {
-  margin-left: 12%;
+  margin-left: 5%;
   background-color: grey;
-  width: 20vw;
-  height: 20vw;
+  width: 22.5vw;
+  height: 22.5vw;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -39,27 +38,41 @@
 }
 
 .profile-picture {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
 }
-.location-text p {
-  margin-left: 12%;
+
+.location-text {
+  margin: 0;
+  margin-left: 5%;
 }
+
+/* Name Text */
 .profile-container h1 {
   margin: 0px;
   font-size: 8vh;
+  letter-spacing: 0.05cap;
+  height: 10vh;
 }
 
+/* Role / Position Text */
 .profile-container h2 {
   margin: 0px;
+  height: 8vh;
   font-size: 5vh;
   color: var(--primary-color);
 }
 
+/* Personal Description text */
 .profile-container p {
-  font-size: 3vh;
+  font-size: 2.5vh;
+  line-height: 2.25rem;
   text-align: left;
 }
 
 .resume {
+  margin-top: 5vh;
   font-size: 1.5rem;
   color: var(--primary-color);
   cursor: pointer;

@@ -1,10 +1,7 @@
-.project-showcase {
-}
-
 .projects-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 2vw;
 }
 
 /* For Phones and Smaller Screens */

@@ -1,9 +1,10 @@
 .project-card-container {
-  border: 5px solid var(--background-color);
+  border: 5px solid var(--secondary-background-color);
   background-color: var(--secondary-background-color);
   width: 25vw;
   height: 50vh;
   border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-card-container.selected {
@@ -27,39 +28,36 @@
 }
 
 .project-content {
-  height: 40%;
+  height: 45%;
   margin: 20px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   text-align: left;
-  font-size: 1vw;
+  font-size: 0.95vw;
   position: relative;
 }
 
+/* Project Name */
 .project-content h2 {
   margin: 0;
-  text-align: center;
-  font-size: 1.75vw;
+  /* text-align: center; */
+  font-size: 1.5vw;
 }
 
+/* Project Description */
 .project-content p {
   flex: 1;
+  margin-top: 5px;
+  /* font-size: 1vw; */
 }
 
 .project-technologies {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  gap: 5px;
   margin-top: auto;
-}
-
-.technology {
-  padding: 3%;
-  border-radius: 25px;
-  background-color: var(--primary-color);
-  color: white;
-  font-size: 1vw;
+  margin-bottom: 10px;
 }
 
 /* For screen widths between 600px and 800px */
@@ -99,14 +97,6 @@
     align-items: flex-end;
     gap: 5px;
     margin-top: auto;
-  }
-
-  .technology {
-    padding: 3%;
-    border-radius: 25px;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 2.5vw; /* Slightly reduced font size */
   }
 }
 
@@ -148,13 +138,5 @@
     align-items: flex-end;
     gap: 5px;
     margin-top: auto;
-  }
-
-  .technology {
-    padding: 3%;
-    border-radius: 25px;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 2.5vw; /* Slightly reduced font size */
   }
 }

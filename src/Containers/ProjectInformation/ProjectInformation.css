@@ -1,4 +1,5 @@
 .project-information-container {
+  margin: 5%;
   height: 50vh;
   width: 80vw;
   background-color: var(--secondary-background-color);
@@ -13,10 +14,29 @@
 }
 
 .project-information {
+  height: 40%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 1vw;
+  position: relative;
+}
+
+.project-information h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.75vw;
+}
+
+.project-information p {
+  flex: 1;
 }
 
 .project-technologies {
-}
-
-.technology {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 5px;
+  margin-top: auto;
 }

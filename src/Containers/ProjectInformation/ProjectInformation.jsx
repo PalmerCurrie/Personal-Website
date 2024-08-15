@@ -1,5 +1,6 @@
 import "./ProjectInformation.css";
 import { useState } from "react";
+import Technology from "../../Components/Technology/Technology";
 
 function ProjectInformation({ project }) {
   const [mediaIndex, setMediaIndex] = useState(0);
@@ -40,9 +41,7 @@ function ProjectInformation({ project }) {
         <p> {project.longDescription} </p>
         <div className="project-technologies">
           {project.technologies.map((technology, index) => (
-            <div key={index} className="technology">
-              {technology}
-            </div>
+            <Technology text={technology} />
           ))}
         </div>
       </div>

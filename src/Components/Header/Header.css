@@ -5,8 +5,8 @@
   background-color: var(--secondary-background-color);
   display: flex;
   flex-direction: row;
-  min-height: 5vh;
-  max-height: 7vh;
+  min-height: 4vh;
+  max-height: 6vh;
   width: 100%;
   position: fixed;
 }
@@ -43,7 +43,7 @@
   font-weight: 700;
 }
 
-.nav-container p:hover {  
+.nav-container p:hover {
   cursor: pointer;
   color: var(--secondary-color);
 }

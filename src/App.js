@@ -30,6 +30,9 @@ function App() {
       <Header theme={theme} onToggleTheme={toggleTheme} />
       <div className="app-content">
         <PersonalProfile />
+        <div className="section-header">
+          <h1>Projects</h1>
+        </div>
         <ProjectShowcase
           selectedProject={selectedProject}
           setSelectedProject={setSelectedProject}

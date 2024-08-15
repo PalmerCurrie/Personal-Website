@@ -23,12 +23,10 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  /* overflow-y: hidden; */
   overflow-x: hidden;
 }
 
 .app {
-  margin: 0;
   height: 100vh;
   width: 100vw;
   text-align: center;
@@ -44,7 +42,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin: 1vh;
+}
+
+.section-header {
+  margin: 2%;
+  text-align: left;
+  width: 90vw;
+  font-size: 2.5vh;
+  color: var(--primary-color);
 }
 
 .App-link {
