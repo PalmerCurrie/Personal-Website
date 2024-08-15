@@ -17,7 +17,7 @@ function ProjectCard({ project, selectedProject, setSelectedProject }) {
       className={`project-card-container ${isSelected ? "selected" : ""}`}
     >
       <div className="project-image">
-        <img src={project.thumbnail} />
+        <img src={project.thumbnail} alt={project.title} />
       </div>
       <div className="project-content">
         <h2>{project.title} </h2>
