@@ -35,12 +35,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; /* Ensure anything outside the container is hidden */
 }
 
 .profile-picture {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
+  width: 100%; /* Ensure the image covers the width of the container */
+  height: 100%; /* Ensure the image covers the height of the container */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 50%; /* Ensure the image is also rounded */
 }
 
 .location-text {

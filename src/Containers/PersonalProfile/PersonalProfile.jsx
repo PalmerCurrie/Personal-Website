@@ -19,7 +19,11 @@ function PersonalProfile() {
       </div>
       <div className="right-column">
         <div className="profile-picture-container">
-          <img src="" alt="profile-picture" className="profile-picture" />
+          <img
+            src="/ProfilePicture.png"
+            alt="profile-picture"
+            className="profile-picture"
+          />
         </div>
         <p className="location-text">📍Vancouver, Canada</p>
       </div>
