@@ -47,7 +47,9 @@ function ProjectInformation({ project }) {
         </div>
       </div>
       <div className="project-information">
-        <p className="caption">{project.mediaList[mediaIndex].caption}</p>
+        <div className="caption-container">
+          <p className="caption">{project.mediaList[mediaIndex].caption}</p>
+        </div>
         <div className="project-name-container">
           <h2>{project.title} </h2>
           <Link
