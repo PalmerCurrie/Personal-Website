@@ -10,7 +10,8 @@ export const ProjectData = [
   //   },
   // ],
   // longDescription: "",
-  // links: "",
+  // link: "",
+  // githubLink: "",
   // technologies: [],
   // thumbnail: "",
   // shortDescription: "",
@@ -26,20 +27,21 @@ export const ProjectData = [
       },
       {
         type: "image",
-        url: "/MessagingApp/MessagingAppUserProfile.png",
-        caption:
-          "The User Profile page allowing users to select a custom display name, or reset their password via email.",
-      },
-      {
-        type: "image",
         url: "/MessagingApp/MessagingAppDirectMessage.png",
         caption:
           "Direct Messaging to a friend through sending a friend request via the users email.",
       },
+      {
+        type: "image",
+        url: "/MessagingApp/MessagingAppUserProfile.png",
+        caption:
+          "The User Profile page allowing users to select a custom display name, or reset their password via email.",
+      },
     ],
     longDescription:
       "Messaging App made with JavaScript + React, using Firebase Cloud Firestore for User Authentication, and managing the database. Users are able to send friend requests to other users via their email, which will send a real-time notification to the reciever allowing them to accept or ignore the friend request. Global and Direct messaging are supported through configuring the Firebase Cloud Firestore database to store all messages and user information. Incorporated Firebase Auth for account creation, sign-in, and password resetting capabilities through email. Users can choose to sign up with Google or create their own account with an email and password.",
-    links: "https://github.com/PalmerCurrie",
+    link: "https://palmercurrie.github.io/Messaging-App/",
+    githubLink: "https://github.com/PalmerCurrie/Messaging-App",
     technologies: ["React", "JavaScript", "Firebase"],
     thumbnail: "/MessagingApp/MessagingAppFrontPage.png",
     shortDescription:
@@ -66,14 +68,11 @@ export const ProjectData = [
         url: "/ShoppingCart/LandingPage.png",
         caption: "Landing page, welcoming users to the store.",
       },
-      {
-        type: "image",
-        url: "/ShoppingCart/EmptyCheckoutPage.png",
-        caption: "The checkout page when no items are placed into the cart.",
-      },
     ],
-    longDescription: "",
-    links: "https://palmercurrie-shopping-cart.netlify.app/",
+    longDescription:
+      "Made with JavaScript and React, utilizing the Fakestore API for real-time product information, the Shopping Cart app lets users browse through the shop catalog. Users are able to filter items based on categories, add and remove items from the cart, adjust item quanities, and complete their purchase via the checkout page.",
+    link: "https://palmercurrie-shopping-cart.netlify.app/",
+    githubLink: "https://github.com/PalmerCurrie/Shopping-Cart",
     technologies: ["React", "JavaScript", "Vite"],
     thumbnail: "/ShoppingCart/CheckoutPage.png",
     shortDescription: "A Shopping-Cart made with the Fake Store API",
@@ -94,9 +93,17 @@ export const ProjectData = [
         caption:
           "Home Page of NBA Wordle displaying information about the game, and how to play it.",
       },
+      {
+        type: "image",
+        url: "/NBAWordle/AnswerPage.png",
+        caption:
+          "Answer Page of NBA Wordle displaying information about the player selected.",
+      },
     ],
-    longDescription: "",
-    links: "https://palmercurrie-nba-wordle.netlify.app/",
+    longDescription:
+      "A fun spinoff of the classic Wordle game featuring NBA Players. Developed using React, JavaScript and utilizing the BALLDONTLIE API, users are able to make predictions as to who they think the mystery player is, while recieving feedback based on the guessed players' attributes. Test your NBA knowledge and guessing skills by playing NBA Wordle! ",
+    link: "https://palmercurrie-nba-wordle.netlify.app/",
+    githubLink: "https://github.com/PalmerCurrie/NBA-Wordle",
     technologies: ["React", "JavaScript"],
     thumbnail: "/NBAWordle/GamePage.png",
     shortDescription: "NBA Wordle made with the BALLDONTLIE API",

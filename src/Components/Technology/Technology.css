@@ -4,6 +4,7 @@
   background-color: var(--primary-color);
   color: white;
   font-size: 1vw;
+  margin-right: 5px;
 }
 
 /* For screen widths between 600px and 800px */
