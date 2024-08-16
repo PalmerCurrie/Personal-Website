@@ -26,7 +26,7 @@ function ProjectInformation({ project }) {
   };
 
   return (
-    <div className="project-information-container">
+    <div className="project-information-container background-gradient">
       <div className="image-container">
         <div onClick={handleMoveLeft}> ⇦ </div>
         <img

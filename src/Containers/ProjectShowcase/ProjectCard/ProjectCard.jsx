@@ -15,7 +15,9 @@ function ProjectCard({ project, selectedProject, setSelectedProject }) {
   return (
     <div
       onClick={handleProjectClick}
-      className={`project-card-container ${isSelected ? "selected" : ""}`}
+      className={`project-card-container ${
+        isSelected ? "selected" : ""
+      } background-gradient`}
     >
       <div className="project-image-container">
         <img

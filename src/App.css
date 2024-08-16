@@ -10,14 +10,31 @@
 
   /* Dark Mode Colors */
   --background-color-dark: #2b2d31;
-  --dark-background-color-dark: #232428;
   --text-color-dark: #ffffff;
-  --secondary-background-color-dark: #1d1e21; /* Darker than the dark background */
+  --secondary-background-color-dark: #232428; /* Darker than the dark background */
 
   /* Default Colors (Light Mode) */
   --background-color: var(--background-color-light);
   --text-color: var(--text-color-light);
   --secondary-background-color: var(--secondary-background-color-light);
+}
+
+/* Gradient Background for profile */
+.background-gradient {
+  background: linear-gradient(
+    109.6deg,
+    var(--background-color) 11.2%,
+    var(--secondary-background-color) 78.9%
+  );
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.dark-mode .background-gradient {
+  background: linear-gradient(
+    115deg,
+    var(--background-color-dark) 15%,
+    var(--secondary-background-color-dark) 85%
+  );
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
 body {

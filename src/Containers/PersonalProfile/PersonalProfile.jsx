@@ -2,7 +2,7 @@ import "./PersonalProfile.css";
 
 function PersonalProfile() {
   return (
-    <div className="profile-container">
+    <div className="profile-container background-gradient">
       <div className="left-column">
         <h1>Hi! I'm Palmer Currie</h1>
         <h2>Full-Stack Developer</h2>
