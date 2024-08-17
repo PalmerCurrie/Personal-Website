@@ -2,7 +2,11 @@ import "./ProjectShowcase.css";
 import ProjectCard from "./ProjectCard/ProjectCard.jsx";
 import { ProjectData } from "./ProjectsData.js";
 
-function ProjectShowcase({ selectedProject, setSelectedProject }) {
+function ProjectShowcase({
+  selectedProject,
+  setSelectedProject,
+  projectInformationRef,
+}) {
   return (
     <div className="projects-container">
       {ProjectData.map((project, index) => (
@@ -11,6 +15,7 @@ function ProjectShowcase({ selectedProject, setSelectedProject }) {
           index={index}
           selectedProject={selectedProject}
           setSelectedProject={setSelectedProject}
+          projectInformationRef={projectInformationRef}
         />
       ))}
     </div>

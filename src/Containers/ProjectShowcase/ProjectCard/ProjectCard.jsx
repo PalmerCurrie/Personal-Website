@@ -1,7 +1,12 @@
 import Technology from "../../../Components/Technology/Technology";
 import "./ProjectCard.css";
 
-function ProjectCard({ project, selectedProject, setSelectedProject }) {
+function ProjectCard({
+  project,
+  selectedProject,
+  setSelectedProject,
+  projectInformationRef,
+}) {
   if (!project || !selectedProject) {
     return null;
   }
@@ -10,6 +15,11 @@ function ProjectCard({ project, selectedProject, setSelectedProject }) {
 
   const handleProjectClick = () => {
     setSelectedProject(project);
+    scrollToSection(projectInformationRef);
+  };
+
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (

@@ -5,7 +5,7 @@ import PersonalProfile from "./Containers/PersonalProfile/PersonalProfile.jsx";
 import Contact from "./Containers/Contact/Contact.jsx";
 
 import { ProjectData } from "./Containers/ProjectShowcase/ProjectsData.js";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ProjectInformation from "./Containers/ProjectInformation/ProjectInformation.jsx";
 
 function App() {
@@ -25,20 +25,38 @@ function App() {
 
   const [selectedProject, setSelectedProject] = useState(ProjectData[0]);
 
+  const profileRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+  const projectInformationRef = useRef(null);
+
   return (
     <div className="app">
-      <Header theme={theme} onToggleTheme={toggleTheme} />
+      <Header
+        theme={theme}
+        onToggleTheme={toggleTheme}
+        profileRef={profileRef}
+        projectsRef={projectsRef}
+        contactRef={contactRef}
+      />
       <div className="app-content">
-        <PersonalProfile />
-        <div className="section-header">
+        <div ref={profileRef} className="ref-container">
+          <PersonalProfile />
+        </div>
+        <div ref={projectsRef} className="section-header">
           <h1>Projects</h1>
         </div>
         <ProjectShowcase
           selectedProject={selectedProject}
           setSelectedProject={setSelectedProject}
+          projectInformationRef={projectInformationRef}
         />
-        <ProjectInformation project={selectedProject} />
-        <Contact />
+        <div ref={projectInformationRef} className="ref-container">
+          <ProjectInformation project={selectedProject} />
+        </div>
+        <div ref={contactRef} className="ref-container">
+          <Contact />
+        </div>
       </div>
     </div>
   );

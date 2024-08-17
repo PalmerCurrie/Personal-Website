@@ -1,15 +1,19 @@
 import "./Header.css";
 import SocialLink from "../SocialLink/SocialLink";
 
-function Header({ theme, onToggleTheme }) {
+function Header({ theme, onToggleTheme, profileRef, projectsRef, contactRef }) {
   const handleThemeClick = () => {
     onToggleTheme();
+  };
+
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className="header-container">
       <div className="name-container">
-        <p>Palmer Currie</p>
+        <p onClick={() => scrollToSection(profileRef)}>Palmer Currie</p>
       </div>
       <div className="social-container">
         {/* SocialLink takes in Icon and Link */}
@@ -69,9 +73,9 @@ function Header({ theme, onToggleTheme }) {
             </svg>
           )}
         </button>
-        <p> Home </p>
-        <p> Projects </p>
-        <p> Contact </p>
+        <p onClick={() => scrollToSection(profileRef)}> Home </p>
+        <p onClick={() => scrollToSection(projectsRef)}> Projects </p>
+        <p onClick={() => scrollToSection(contactRef)}> Contact </p>
       </div>
     </div>
   );

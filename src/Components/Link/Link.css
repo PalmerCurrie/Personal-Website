@@ -1,12 +1,11 @@
 .link {
   display: flex;
-  align-items: center;
+  justify-content: center;
   background-color: var(--primary-color);
-  color: white;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  width: 8.5rem;
-  height: 3rem;
+  width: 7.5rem;
+  height: 2.5rem;
   border-radius: 25px;
 }
 
@@ -16,23 +15,18 @@
 
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  font-size: 1rem;
   color: white;
 }
 
 .link-icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 4vh;
-  height: 4vh;
+  width: 3.5vh;
+  height: 3.5vh;
   margin: 5px;
 }
 
 .link-text-container {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
+  margin-right: 10px;
 }
