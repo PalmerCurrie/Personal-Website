@@ -17,6 +17,7 @@
   display: flex;
   -ms-flex-align: start;
   align-items: center;
+  white-space: nowrap;
 }
 
 .social-container {
@@ -47,10 +48,6 @@
   cursor: pointer;
   color: var(--secondary-color);
 }
-.name-container p:hover {
-  cursor: pointer;
-  color: var(--secondary-color);
-}
 
 button {
   color: var(--text-color);
@@ -69,4 +66,56 @@ button svg {
 
 button:hover {
   color: #a9a9a9;
+}
+
+.header-link-container {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 32px;
+  columns: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    height: 5vh;
+  }
+
+  .header-link-container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--background-color);
+  }
+  .header-link-container.open {
+    display: flex;
+    padding: 0 2rem;
+    width: fit-content;
+    margin-top: 27vh;
+    position: absolute;
+    right: 0;
+  }
+
+  .header-link-container p {
+    margin: 5px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    margin-right: 5px;
+  }
+
+  .name-container {
+    margin-left: 5px;
+  }
+  .social-container {
+    margin-left: 30px;
+  }
+
+  button {
+  }
 }

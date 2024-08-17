@@ -1,5 +1,6 @@
 import "./Header.css";
 import SocialLink from "../SocialLink/SocialLink";
+import { useState } from "react";
 
 function Header({ theme, onToggleTheme, profileRef, projectsRef, contactRef }) {
   const handleThemeClick = () => {
@@ -8,6 +9,12 @@ function Header({ theme, onToggleTheme, profileRef, projectsRef, contactRef }) {
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen((current) => !current);
   };
 
   return (
@@ -73,9 +80,14 @@ function Header({ theme, onToggleTheme, profileRef, projectsRef, contactRef }) {
             </svg>
           )}
         </button>
-        <p onClick={() => scrollToSection(profileRef)}> Home </p>
-        <p onClick={() => scrollToSection(projectsRef)}> Projects </p>
-        <p onClick={() => scrollToSection(contactRef)}> Contact </p>
+        <div className={`header-link-container ${isOpen ? "open" : ""}`}>
+          <p onClick={() => scrollToSection(profileRef)}> Home </p>
+          <p onClick={() => scrollToSection(projectsRef)}> Projects </p>
+          <p onClick={() => scrollToSection(contactRef)}> Contact </p>
+        </div>
+        <div className="nav-toggle" onClick={toggleOpen}>
+          &#9776;
+        </div>
       </div>
     </div>
   );
