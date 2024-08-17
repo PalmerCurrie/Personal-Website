@@ -35,14 +35,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Ensure anything outside the container is hidden */
+  overflow: hidden;
 }
 
 .profile-picture {
-  width: 100%; /* Ensure the image covers the width of the container */
-  height: 100%; /* Ensure the image covers the height of the container */
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-  border-radius: 50%; /* Ensure the image is also rounded */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .location-text {
@@ -93,13 +93,26 @@
 /* For Phones and Smaller Screens */
 @media (max-width: 768px) {
   .profile-container {
+    margin-top: 5rem;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 90vw;
-    height: auto;
-    padding: 5%;
-    margin-top: 10%;
+    height: 100%;
+    background-color: var(--secondary-background-color);
+    border-radius: 40px;
+    padding: 2.5%;
   }
+
+  .left-column {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0px;
+    margin: 0px;
+  }
+
   .right-column {
     width: 35%;
     display: flex;
@@ -108,34 +121,61 @@
   }
 
   .profile-picture-container {
+    margin-left: 5%;
     background-color: grey;
-    width: 25vw;
-    height: 25vw;
+    width: 30vw;
+    height: 30vw;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
   }
 
   .profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
 
+  .right-column .location-text {
+    font-size: 3vw;
+  }
+
+  .location-text {
+    margin: 0;
+    margin-left: 5%;
+    white-space: nowrap;
+  }
+
+  /* Name Text */
   .profile-container h1 {
-    margin-top: 5px;
-    font-size: 1.4rem;
+    margin: 0px;
+    margin-top: 10px;
+    font-size: 6vw;
+    letter-spacing: 0.05cap;
+    height: 6vh;
+    white-space: nowrap;
   }
 
+  /* Role / Position Text */
   .profile-container h2 {
-    font-size: 1.2rem;
+    margin: 0px;
+    font-size: 5vw;
     color: var(--primary-color);
+    height: 100%;
   }
 
+  /* Personal Description text */
   .profile-container p {
+    font-size: 1.75vh;
+    line-height: 1.5rem;
     text-align: left;
-    font-size: 1rem;
   }
 
   .resume {
+    margin-top: 1vh;
     font-size: 1.5rem;
     color: var(--primary-color);
     cursor: pointer;
@@ -144,5 +184,10 @@
 
   .resume:hover {
     color: var(--secondary-color);
+  }
+
+  .right-column p {
+    color: var(--primary-color);
+    font-weight: 700;
   }
 }
