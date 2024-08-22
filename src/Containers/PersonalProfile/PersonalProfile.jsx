@@ -1,6 +1,10 @@
 import "./PersonalProfile.css";
 
 function PersonalProfile() {
+  const openResume = () => {
+    window.open("/Palmer-Currie-Resume-Sept-2024.pdf", "_blank");
+  };
+
   return (
     <div className="profile-container background-gradient">
       <div className="left-column">
@@ -9,13 +13,15 @@ function PersonalProfile() {
         <p>
           {" "}
           Third Year student studying at the University of British Columbia
-          majoring in Computer Science. Full-Stack Web Developer, specializing
-          in React, JavaScript, and SQL. I love playing and watching sports such
-          as basketball and hockey, working out, and creating! Feel free to
-          checkout some of my projects, or reach out to me through the links in
-          the header!
+          majoring in Computer Science. I am a Full-Stack Web Developer,
+          specializing in React, JavaScript, and SQL. I love playing and
+          watching sports such as basketball and hockey, working out, and
+          creating! Feel free to checkout some of my projects, or reach out to
+          me through the links in the header!
         </p>
-        <p className="resume">➣ View Resume </p>
+        <p className="resume" onClick={openResume}>
+          ➣ View Resume{" "}
+        </p>
       </div>
       <div className="right-column">
         <div className="profile-picture-container">

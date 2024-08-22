@@ -49,6 +49,11 @@
   color: var(--secondary-color);
 }
 
+.name-container p:hover {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
 button {
   color: var(--text-color);
   background-color: transparent;
