@@ -2,7 +2,7 @@ import "./PersonalProfile.css";
 
 function PersonalProfile() {
   const openResume = () => {
-    window.open("/Palmer-Currie-Resume-Sept-2024.pdf", "_blank");
+    window.open("/Palmer-Currie-Resume.pdf", "_blank");
   };
 
   return (
