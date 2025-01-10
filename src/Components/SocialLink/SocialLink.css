@@ -1,7 +1,7 @@
 .social-link {
   display: inline-block;
-  width: 6vh;
-  height: 6vh;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: var(--primary-color);
   display: flex;
@@ -19,13 +19,59 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4.5vh;
-  height: 4.5vh;
+  width: 40px;
 }
 
+.name-container p {
+  font-size: 2rem;
+}
+
+/* Tablet */
 @media (max-width: 768px) {
   .social-link {
-    width: 5vh;
-    height: 5vh;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-container {
+    margin-left: 8vw;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+  }
+
+  .name-container p {
+    font-size: 1.5rem;
   }
 }
+
+
+/* Phone Size */
+@media (max-width: 425px) {
+
+
+  .nav-container button {
+    margin-right: -15px;
+  }
+
+  .social-link {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+  }
+
+  .name-container p {
+    font-size: 1.25rem;
+  }
+}
+

@@ -98,7 +98,7 @@
     flex-direction: row;
     justify-content: center;
     width: 85vw;
-    height: 100%;
+    height: 65vw;
     background-color: var(--secondary-background-color);
     border-radius: 40px;
     padding: 5%;
@@ -122,7 +122,7 @@
   }
 
   .profile-picture-container {
-    margin-top: 6vw;
+    margin-top: 15vw;
     margin-left: 5%;
     background-color: grey;
     width: 30vw;
@@ -172,13 +172,13 @@
   /* Personal Description text */
   .profile-container p {
     margin: 0px;
-    font-size: 2.5vw;
+    font-size: 3.5vw;
     line-height: 4vw;
     text-align: left;
+    margin-bottom: 2.5vw;
   }
 
   .resume {
-    margin-top: 1vh;
     font-size: 1.5rem;
     color: var(--primary-color);
     cursor: pointer;
