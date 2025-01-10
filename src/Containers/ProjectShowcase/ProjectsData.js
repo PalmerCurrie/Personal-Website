@@ -17,6 +17,35 @@ export const ProjectData = [
   // shortDescription: "",
   // },
   {
+    title: "AlgoBytes",
+    id: 0,
+    mediaList: [
+      {
+        type: "image",
+        url: "/AlgoBytes/AlgoBytesThumbnail.png",
+        caption: "",
+      },
+      {
+        type: "image",
+        url: "/AlgoBytes/AlgoBytesRoadmap.png",
+        caption: "Learning Roadmap",
+      },
+      {
+        type: "image",
+        url: "/AlgoBytes/AlgoBytesQuizScreen.png",
+        caption: "Active Recall based Quizes",
+      },
+    ],
+    longDescription:
+      "A Duolingo-inspired mobile app created to teach how to solve coding problems and data structures & algorithms. This app was developed using React Native and SupaBase and works on both Android and iOS. The goal of this app was to lower the barrier to entry for leetcode, which can be daunting as you might sit in front of a problem for 30 minutes wihtout knowing what to do. By leveraging learning active recall and spaced repition, we aim to help people master the intuition behind solving programming problems.",
+    link: "https://algobytes.app/",
+    githubLink: "",
+    technologies: ["React Native", "PostgreSQL", "SupaBase"],
+    thumbnail: "/AlgoBytes/AlgoBytesThumbnail.png",
+    shortDescription:
+      "A Duolingo-inspired mobile app created to teach how to solve coding problems and data structures & algorithms.",
+  },
+  {
     title: "Messaging App",
     id: 1,
     mediaList: [

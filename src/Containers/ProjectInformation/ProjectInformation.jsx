@@ -57,11 +57,12 @@ function ProjectInformation({ project }) {
             link={project.link}
             text="Website"
           />
-          <Link
-            icon={<img src="github.svg" alt="GitHub" />}
-            link={project.githubLink}
-            text="GitHub"
-          />
+          {project.githubLink !== "" && 
+            <Link
+              icon={<img src="github.svg" alt="GitHub" />}
+              link={project.githubLink}
+              text="GitHub"
+            />}
         </div>
         <p> {project.longDescription} </p>
         <div className="project-technologies">

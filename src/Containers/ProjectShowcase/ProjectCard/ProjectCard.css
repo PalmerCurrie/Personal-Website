@@ -1,8 +1,9 @@
 .project-card-container {
   border: 5px solid var(--secondary-background-color);
   background-color: var(--secondary-background-color);
-  width: 25vw;
-  height: 50vh;
+  width: 33vw;
+  height: 33vw;
+  margin-inline: 1vw;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -41,7 +42,6 @@
 /* Project Name */
 .project-content h2 {
   margin: 0;
-  /* text-align: center; */
   font-size: 1.5vw;
 }
 
@@ -49,7 +49,6 @@
 .project-content p {
   flex: 1;
   margin-top: 5px;
-  /* font-size: 1vw; */
 }
 
 .project-technologies {
@@ -60,35 +59,34 @@
   margin-bottom: 10px;
 }
 
-/* For screen widths between 600px and 800px */
+
 @media (min-width: 600px) and (max-width: 800px) {
   .project-card-container {
     background-color: var(--secondary-background-color);
     width: 80vw;
-    height: 75vh;
-    box-sizing: border-box; /* Ensures padding is included within the height/width */
-    overflow: hidden; /* Prevents overflow */
+    height: 90vw;
+    box-sizing: border-box;
+    overflow: hidden; 
   }
 
   .project-image-container {
     background-color: grey;
-    height: 50%; /* Slightly reduced to give more space for content */
+    height: 50%; 
   }
 
   .project-content {
-    padding: 10px; /* Reduced padding to avoid overflow */
+    padding: 10px;
     display: flex;
     flex-direction: column;
     text-align: left;
-    font-size: 3vw; /* Slightly reduced font size */
+    font-size: 3vw; 
     position: relative;
-    overflow: hidden; /* Prevents content from overflowing */
+    overflow: hidden; 
   }
 
   .project-content h2 {
     margin: 0;
-    text-align: center;
-    font-size: 5vw; /* Slightly reduced font size */
+    font-size: 5vw;
   }
 
   .project-technologies {
@@ -100,14 +98,13 @@
   }
 }
 
-/* Screens such as phone screens */
-
+/* Phone Screens */
 @media (max-width: 600px) {
   .project-card-container {
     border: 5px solid var(--secondary-background-color);
     background-color: var(--secondary-background-color);
     width: 75vw;
-    height: 50vh;
+    height: 90vw;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -140,13 +137,14 @@
   /* Project Name */
   .project-content h2 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 6vw;
     white-space: nowrap;
   }
 
   /* Project Description */
   .project-content p {
     flex: 1;
+    font-size: 4vw;
     margin-top: 5px;
   }
 
