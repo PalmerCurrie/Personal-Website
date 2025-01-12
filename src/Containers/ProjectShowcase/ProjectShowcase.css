@@ -4,10 +4,7 @@
   gap: 2vw;
 }
 
-/* For Phones and Smaller Screens */
 @media (max-width: 768px) {
-  .project-showcase {
-  }
 
   .projects-container {
     display: flex;
