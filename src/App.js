@@ -1,12 +1,13 @@
 import "./App.css";
 import Header from "./Components/Header/Header.jsx";
-import ProjectShowcase from "./Containers/ProjectShowcase/ProjectShowcase.jsx";
-import PersonalProfile from "./Containers/PersonalProfile/PersonalProfile.jsx";
 import Contact from "./Containers/Contact/Contact.jsx";
+import PersonalProfile from "./Containers/PersonalProfile/PersonalProfile.jsx";
+import ProjectShowcase from "./Containers/ProjectShowcase/ProjectShowcase.jsx";
 
-import { ProjectData } from "./Containers/ProjectShowcase/ProjectsData.js";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import ExperienceContainer from "./Containers/Experience/ExperienceContainer.jsx";
 import ProjectInformation from "./Containers/ProjectInformation/ProjectInformation.jsx";
+import { ProjectData } from "./Containers/ProjectShowcase/ProjectsData.js";
 
 function App() {
   const [theme, setTheme] = useState(true);
@@ -43,6 +44,7 @@ function App() {
         <div ref={profileRef} className="ref-container">
           <PersonalProfile />
         </div>
+        <ExperienceContainer />
         <div ref={projectsRef} className="section-header">
           <h1>Projects</h1>
         </div>
