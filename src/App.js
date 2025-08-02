@@ -44,9 +44,12 @@ function App() {
         <div ref={profileRef} className="ref-container">
           <PersonalProfile />
         </div>
+        <div ref={projectsRef} className="section-header">
+          <h2>Technical Experience</h2>
+        </div>
         <ExperienceContainer />
         <div ref={projectsRef} className="section-header">
-          <h1>Projects</h1>
+          <h2>Projects</h2>
         </div>
         <ProjectShowcase
           selectedProject={selectedProject}

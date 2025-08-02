@@ -3,7 +3,7 @@ import './Experience.css';
 import ExperienceCard from './ExperienceCard';
 
 export default function ExperienceContainer() {
-  const [openIndex, setOpenIndex] = useState(0); // first one open by default
+  const [openIndex, setOpenIndex] = useState(0);
 
   const experiences = [
     {
@@ -21,7 +21,7 @@ export default function ExperienceContainer() {
       imageSrc: '/city-of-vancouver-logo.jpg',
       title: 'Program Assistant 2',
       company: 'City of Vancouver',
-      date: 'Apr 2024 - present',
+      date: 'Apr 2024 - Present',
       details: [
         'Assisted with community event planning.',
         'Managed scheduling and registrations.',
@@ -31,7 +31,7 @@ export default function ExperienceContainer() {
     {
       imageSrc: '/WECCA-logo.jpg',
       title: 'Senior Summer Daycamp Leader',
-      company: 'West End Community Centre Association',
+      company: 'West End Community Centre',
       date: 'Mar 2022 - Aug 2024',
       details: ['Led summer camps, coordinated activities, and managed staff.'],
     },
@@ -39,7 +39,7 @@ export default function ExperienceContainer() {
       imageSrc: '/cactus-club-logo.png',
       title: 'Prep/Line Cook',
       company: 'Cactus Club Cafe',
-      date: 'Jan 2020 - June 2022',
+      date: 'Jan 2020 - Jun 2022',
       details: ['Prepared meals and maintained kitchen operations.'],
     },
   ];
@@ -51,7 +51,7 @@ export default function ExperienceContainer() {
   return (
     <div className="experience-container">
       <div className="experience-description">
-        <h2>Technical Experience </h2>
+        {/* <p>Here are some of my professional experiences:</p> */}
       </div>
 
       <div className="experience-card-container">

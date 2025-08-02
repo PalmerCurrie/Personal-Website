@@ -1,9 +1,6 @@
 .experience-container {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  width: 65vw;
-  padding: 20px;
-  gap: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .experience-description {
@@ -19,7 +16,7 @@
 }
 
 .experience-card-wrapper {
-  width: 100%;
+  width: 60vw;
 }
 
 .experience-card {
@@ -107,18 +104,12 @@
   .experience-container {
     display: flex;
     flex-direction: column;
-    width: 85vw;
-    padding: 10px;
-    gap: 15px;
+    width: 90vw;
   }
 
   .experience-description {
     position: static;
     top: auto;
-  }
-
-  .experience-card {
-    height: 60px;
   }
 
   .experience-image-container {
@@ -134,5 +125,10 @@
   .job-date,
   .dropdown-inner li {
     font-size: 3.5vw;
+  }
+
+  .experience-card-wrapper {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
