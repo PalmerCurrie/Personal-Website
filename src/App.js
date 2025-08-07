@@ -27,6 +27,7 @@ function App() {
   const [selectedProject, setSelectedProject] = useState(ProjectData[0]);
 
   const profileRef = useRef(null);
+  const experienceRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
   const projectInformationRef = useRef(null);
@@ -37,6 +38,7 @@ function App() {
         theme={theme}
         onToggleTheme={toggleTheme}
         profileRef={profileRef}
+        experienceRef={experienceRef}
         projectsRef={projectsRef}
         contactRef={contactRef}
       />
@@ -44,10 +46,10 @@ function App() {
         <div ref={profileRef} className="ref-container">
           <PersonalProfile />
         </div>
-        <div ref={projectsRef} className="section-header">
+        <div ref={experienceRef} className="section-header">
           <h2>Technical Experience</h2>
+          <ExperienceContainer />
         </div>
-        <ExperienceContainer />
         <div ref={projectsRef} className="section-header">
           <h2>Projects</h2>
         </div>
