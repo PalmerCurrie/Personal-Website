@@ -5,10 +5,19 @@
   background-color: var(--secondary-background-color);
   display: flex;
   flex-direction: row;
-  min-height: 4vh;
-  max-height: 6vh;
-  width: 100%;
+  height: 6vh;
+  width: 100vw;
+  min-width: 500px;
   position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition:
+    width 0.2s ease,
+    top 0.2s ease,
+    height 0.2s ease,
+    border-radius 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .header-name-container {
@@ -92,40 +101,92 @@ button:hover {
   columns: #fff;
   cursor: pointer;
 }
+@media (max-width: 1300px) {
+  .header-container {
+    width: 100%;
+    min-width: 500px;
+    height: 5vh;
+    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
 
 @media (max-width: 768px) {
   .header-container {
-    height: 5vh;
-  }
-
-  .header-link-container {
-    display: none;
-    flex-direction: column;
     width: 100%;
-    background-color: var(--background-color);
+    min-width: 80vw;
+    height: 5vh;
+    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
   }
-  .header-link-container.open {
+
+  .header-name-container {
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-container {
+    width: 70%;
     display: flex;
-    padding: 0 2rem;
-    width: fit-content;
-    margin-top: 27vh;
-    position: absolute;
-    right: 0;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
-  .header-link-container p {
-    margin: 5px;
+  .theme-button-container {
+    width: 10%;
+    justify-content: flex-end;
+    padding-top: 5px;
+    justify-content: center;
+    align-items: center;
   }
 
-  .nav-toggle {
-    display: flex;
-    margin-right: 5px;
-  }
-
-  .name-container {
-    margin-left: 5px;
-  }
-  .social-container {
-    margin-left: 30px;
+  .nav-container p {
+    font-size: clamp(1rem, 1vw, 1.25rem);
+    font-weight: 700;
   }
 }
+
+@media (max-width: 500px) {
+  .header-container {
+    min-width: 90vw;
+  }
+
+  .header-name-container {
+    width: 10%;
+  }
+
+  .nav-container {
+    width: 80%;
+  }
+
+  .nav-container p {
+    font-size: clamp(0.9rem, 1vw, 1.0rem);
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 300px) {
+  .header-container {
+    min-width: 100vw;
+  }
+  .header-name-container {
+    width: 10%;
+  }
+
+  .nav-container {
+    width: 80%;
+  }
+  
+  .nav-container p {
+    font-size: clamp(0.65rem, 1vw, 1.0rem);
+    font-weight: 700;
+  }
+}
+
