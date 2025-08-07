@@ -54,10 +54,19 @@ function Header({
 }) {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [showFullName, setShowFullName] = useState(false);
-  useEffect(() => {
-    let ticking = false;
 
+  const isMobile = windowWidth <= 600;
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+
+    let ticking = false;
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
@@ -69,43 +78,27 @@ function Header({
       }
     };
 
-    const handleResize = () => setWindowWidth(window.innerWidth);
-
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
-
     handleScroll();
-    handleResize();
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isMobile]);
 
-  useEffect(() => {
-    let timeout;
-
-    if (scrollProgress <= 0.5 && windowWidth > 600) {
-      timeout = setTimeout(() => {
-        setShowFullName(true);
-      }, 150);
-    } else {
-      setShowFullName(false);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [scrollProgress, windowWidth]);
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const headerStyle = useMemo(() => {
+    const progress = isMobile ? 1 : scrollProgress;
+
     return {
-      width: `${Math.max(60, 100 - 66 * scrollProgress)}vw`,
-      top: `${10 * scrollProgress}px`,
-      height: `${5.5 - scrollProgress}vh`,
-      borderRadius: `${scrollProgress * 100}px`,
+      width: `${Math.max(60, 100 - 66 * progress)}vw`,
+      top: `${10 * progress}px`,
+      height: `${5.5 - progress}vh`,
+      borderRadius: `${progress * 100}px`,
       backgroundColor: theme
-        ? `rgba(35, 36, 40, ${1 - 0.05 * scrollProgress})`
-        : `rgba(241, 241, 241, ${1 - 0.05 * scrollProgress})`,
+        ? `rgba(35, 36, 40, ${1 - 0.05 * progress})`
+        : `rgba(241, 241, 241, ${1 - 0.05 * progress})`,
       border: theme
         ? `1px solid rgba(255, 255, 255, 0.08)`
         : `1px solid rgba(0, 0, 0, 0.1)`,
@@ -113,25 +106,13 @@ function Header({
         'width 0.4s ease, top 0.4s ease, height 0.4s ease, border-radius 0.4s ease, background-color 0.4s ease, border 0.4s ease',
       margin: '0 auto',
     };
-  }, [scrollProgress, theme]);
-
-  const scrollToSection = (ref) => {
-    ref.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  function renderThemeButton() {
-    return (
-      <button onClick={() => onToggleTheme()}>
-        {theme ? sunSVG : moonSVG}
-      </button>
-    );
-  }
+  }, [scrollProgress, theme, isMobile]);
 
   return (
     <div className="header-container" style={headerStyle}>
       <div className="header-name-container">
         <h1 onClick={() => scrollToSection(profileRef)}>
-          {windowWidth <= 600 || !showFullName ? 'PC' : 'Palmer Currie'}
+          {isMobile || scrollProgress > 0.5 ? 'PC' : 'Palmer Currie'}
         </h1>
       </div>
 
@@ -142,7 +123,9 @@ function Header({
         <p onClick={() => scrollToSection(contactRef)}> Contact </p>
       </div>
 
-      <div className="theme-button-container">{renderThemeButton()}</div>
+      <div className="theme-button-container">
+        <button onClick={onToggleTheme}>{theme ? sunSVG : moonSVG}</button>
+      </div>
     </div>
   );
 }

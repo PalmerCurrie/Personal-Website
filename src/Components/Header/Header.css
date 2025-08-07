@@ -155,11 +155,16 @@ button:hover {
 
 @media (max-width: 500px) {
   .header-container {
-    min-width: 90vw;
+    min-width: 95vw;
   }
 
   .header-name-container {
     width: 10%;
+    margin-right: 10px
+  }
+
+  .header-name-container h1 {
+    font-size: clamp(1.2rem, 1vw, 1.5rem);
   }
 
   .nav-container {
@@ -172,7 +177,7 @@ button:hover {
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 350px) {
   .header-container {
     min-width: 100vw;
   }
