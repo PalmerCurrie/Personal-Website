@@ -56,17 +56,21 @@ function Header({
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showFullName, setShowFullName] = useState(false);
 
-  useEffect(() => {}, []);
-
   useEffect(() => {
     const handleScroll = () => {
       window.requestAnimationFrame(() => {
         const progress = Math.min(window.scrollY / 300, 1);
         setScrollProgress(progress);
+        console.log('scrollY:', window.scrollY);
       });
     };
     const handleResize = () => setWindowWidth(window.innerWidth);
+
+    window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
+    handleScroll();
+    handleResize();
+
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
