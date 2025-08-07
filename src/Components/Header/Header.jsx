@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import './Header.css';
 
 const sunSVG = (
@@ -55,25 +55,31 @@ function Header({
   const [scrollProgress, setScrollProgress] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showFullName, setShowFullName] = useState(false);
-
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      window.requestAnimationFrame(() => {
-        const progress = Math.min(window.scrollY / 300, 1);
-        setScrollProgress(progress);
-        console.log('scrollY:', window.scrollY);
-      });
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const progress = Math.min(window.scrollY / 300, 1);
+          setScrollProgress(progress);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
+
     const handleResize = () => setWindowWidth(window.innerWidth);
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
+
     handleScroll();
     handleResize();
 
     return () => {
-      window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -91,21 +97,23 @@ function Header({
     return () => clearTimeout(timeout);
   }, [scrollProgress, windowWidth]);
 
-  const headerStyle = {
-    width: `${100 - 66 * scrollProgress}vw`,
-    margin: '0 auto',
-    top: `${10 * scrollProgress}px`,
-    height: `${5.5 - scrollProgress}vh`,
-    borderRadius: `${scrollProgress * 100}px`,
-    backgroundColor: theme
-      ? `rgba(35, 36, 40, ${1 - 0.05 * scrollProgress})`
-      : `rgba(241, 241, 241, ${1 - 0.05 * scrollProgress})`,
-    border: theme
-      ? `1px solid rgba(255, 255, 255, 0.08)`
-      : `1px solid rgba(0, 0, 0, 0.1)`,
-    transition:
-      'width 0.4s ease, top 0.4s ease, height 0.4s ease, border-radius 0.4s ease, background-color 0.4s ease, border 0.4s ease',
-  };
+  const headerStyle = useMemo(() => {
+    return {
+      width: `${Math.max(60, 100 - 66 * scrollProgress)}vw`,
+      top: `${10 * scrollProgress}px`,
+      height: `${5.5 - scrollProgress}vh`,
+      borderRadius: `${scrollProgress * 100}px`,
+      backgroundColor: theme
+        ? `rgba(35, 36, 40, ${1 - 0.05 * scrollProgress})`
+        : `rgba(241, 241, 241, ${1 - 0.05 * scrollProgress})`,
+      border: theme
+        ? `1px solid rgba(255, 255, 255, 0.08)`
+        : `1px solid rgba(0, 0, 0, 0.1)`,
+      transition:
+        'width 0.4s ease, top 0.4s ease, height 0.4s ease, border-radius 0.4s ease, background-color 0.4s ease, border 0.4s ease',
+      margin: '0 auto',
+    };
+  }, [scrollProgress, theme]);
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
