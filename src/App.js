@@ -47,7 +47,7 @@ function App() {
           <PersonalProfile />
         </div>
         <div ref={experienceRef} className="section-header">
-          <h2>Technical Experience</h2>
+          <h2>Experience</h2>
           <ExperienceContainer />
         </div>
         <div ref={projectsRef} className="section-header">
