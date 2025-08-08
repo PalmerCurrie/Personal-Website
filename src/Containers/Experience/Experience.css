@@ -35,7 +35,7 @@
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-self: center;
 }
 
 .job-image {
@@ -48,6 +48,8 @@
   text-align: left;
   flex: 1;
   margin-left: 15px;
+  justify-content: center;
+  align-self: center;
 }
 
 .job-information p {
@@ -57,17 +59,21 @@
 .job-title {
   font-weight: bold;
   color: var(--text-color);
+  font-size: clamp(1rem, 1.5vw, 1.5rem); 
 }
 
 .company {
   color: #a9a9bd;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 1.25vw, 1rem);
 }
 
 .job-date {
-  min-width: 120px;
+  min-width: 100px;
   text-align: right;
   color: #a9a9bd;
+  font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+    justify-content: center;
+  align-self: center;
 }
 
 .dropdown-content {
@@ -92,8 +98,8 @@
   list-style-type: disc;
   color: var(--text-color);
   text-align: left;
+  font-size: clamp(0.75rem, 2.5vw, 0.95rem);
 }
-
 
 .dropdown-content.open {
   max-height: 300px; 
@@ -107,24 +113,37 @@
     width: 90vw;
   }
 
+  .experience-card {
+    height: auto;              
+    align-items: flex-start;   
+    min-height: 75px;
+  }
+
   .experience-description {
     position: static;
     top: auto;
   }
 
-  .experience-image-container {
-    width: 40px;
-    height: 40px;
-  }
 
   .job-title {
-    font-size: 4vw;
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
   }
 
   .company,
-  .job-date,
+  .job-date {
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+  }
+
   .dropdown-inner li {
-    font-size: 3.5vw;
+    font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+  }
+  
+  .dropdown-content {
+    height: 0; 
+    overflow: hidden;
+    transition: height 0.3s ease;
+    color: var(--text-color);
+    border-bottom: 1px solid #a9a9bd;
   }
 
   .experience-card-wrapper {

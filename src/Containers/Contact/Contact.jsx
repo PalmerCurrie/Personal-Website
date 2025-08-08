@@ -22,7 +22,15 @@ function Contact() {
         />
       </div>
       <p>
-        Contact Me At: palmercurrie@gmail.com or linkedin.com/in/palmercurrie/
+        Contact Me At:{' '}
+        <a href="mailto:palmercurrie@gmail.com">palmercurrie@gmail.com</a> or{' '}
+        <a
+          href="https://linkedin.com/in/palmercurrie/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          linkedin.com/in/palmercurrie/
+        </a>
       </p>
     </div>
   );

@@ -33,14 +33,22 @@ export default function ExperienceContainer() {
       title: 'Senior Summer Daycamp Leader',
       company: 'West End Community Centre',
       date: 'Mar 2022 - Aug 2024',
-      details: ['Led summer camps, coordinated activities, and managed staff.'],
+      details: [
+        'Led summer camps, coordinated activities, and managed staff.',
+        'Oversaw daily programs for 100+ participants, ensuring safety and engagement.',
+        'Trained and supervised a team of junior leaders to deliver quality programming.',
+      ],
     },
     {
       imageSrc: '/cactus-club-logo.png',
       title: 'Prep/Line Cook',
       company: 'Cactus Club Cafe',
       date: 'Jan 2020 - Jun 2022',
-      details: ['Prepared meals and maintained kitchen operations.'],
+      details: [
+        'Prepared meals and maintained kitchen operations.',
+        'Worked in a high-volume kitchen, serving over 1,000 guests daily during peak seasons.',
+        'Ensured consistent food quality by adhering to standardized recipes and presentation guidelines.',
+      ],
     },
   ];
 
