@@ -12,12 +12,12 @@ function PersonalProfile() {
           <h1>Hi! I'm Palmer Currie</h1>
           <h2>Full-Stack Developer</h2>
           <p>
-            Third Year student studying at the University of British Columbia
-            majoring in Computer Science. I am a Full-Stack Web Developer,
-            specializing in React, JavaScript, and SQL. I love playing and
-            watching sports such as basketball and hockey, working out, and
-            creating! Feel free to checkout some of my projects, or reach out to
-            me through the links in the header!
+            I’m a third-year Computer Science student at the University of
+            British Columbia and a passionate Full-Stack Web Developer
+            specializing in React, TypeScript, and SQL. Outside of coding, I
+            enjoy basketball, hockey, working out, and building creative
+            projects. Check out my work or connect with me through the links in
+            the header!
           </p>
         </div>
         <div className="right-column">
