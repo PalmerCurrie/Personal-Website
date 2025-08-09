@@ -3,7 +3,7 @@
   padding: 2.5%;
   margin: 5%;
   height: 75vh;
-  width: 60vw;
+  width: 66vw;
   background-color: var(--secondary-background-color);
   display: flex;
   flex-direction: column;
@@ -79,8 +79,8 @@
 }
 
 .project-information h2 {
-  margin: 0;
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  line-height: 1.2;
 }
 
 .link-container {
@@ -89,18 +89,30 @@
 }
 
 .project-information p {
-  margin-top: 0.5%;
-  flex: 1;
-  font-size: 1.2rem;
-  line-height: 110%;
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+  line-height: 1.35;
 }
 
-.project-technologies {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  gap: 5px;
-  margin-top: auto;
+.project-information .caption {
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+}
+
+.link-container,
+.link-container a,
+.link-container button {
+  font-size: clamp(0.85rem, 1.3vw, 1rem);
+  line-height: 1.2;
+}
+
+.project-technologies,
+.project-technologies * {
+  font-size: clamp(0.75rem, 1.1vw, 0.95rem);
+  line-height: 1.2;
+}
+
+.image-arrow p {
+  font-size: clamp(0.9rem, 2.2vw, 1.25rem);
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -137,7 +149,7 @@
     border-radius: 50%;
     background-color: var(--primary-color);
     color: white;
-    font-size: 3vw;
+    font-size: clamp(0.85rem, 3vw, 1.2rem);
     width: 1.5vw;
     height: 1.5vw;
     display: flex;
@@ -151,12 +163,11 @@
     margin: 0;
     margin-top: 5px;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: clamp(0.85rem, 2.5vw, 1.1rem);
   }
 
   .project-name-container {
     margin: 0;
-    margin-top: 1vh;
     justify-content: center;
     align-items: center;
     width: 80vw;
@@ -165,7 +176,7 @@
   }
 
   .project-information h2 {
-    font-size: 6vw;
+    font-size: clamp(1.25rem, 6vw, 2.5rem);
     white-space: nowrap;
     text-align: center;
   }
@@ -173,7 +184,7 @@
   .project-information p {
     margin-top: 2.5vh;
     flex: 1;
-    font-size: 3.5vw;
+    font-size: clamp(.75rem, 3vw, 1.5rem);
     line-height: 110%;
   }
 
@@ -183,5 +194,6 @@
     align-items: flex-end;
     gap: 5px;
     margin-top: auto;
+    font-size: clamp(0.85rem, 2.8vw, 1.1rem);
   }
 }

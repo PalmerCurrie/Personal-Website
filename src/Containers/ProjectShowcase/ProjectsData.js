@@ -37,10 +37,10 @@ export const ProjectData = [
       },
     ],
     longDescription:
-      "A Duolingo-inspired mobile app created to teach how to solve coding problems and data structures & algorithms. This app was developed using React Native and SupaBase and works on both Android and iOS. The goal of this app was to lower the barrier to entry for leetcode, which can be daunting as you might sit in front of a problem for 30 minutes wihtout knowing what to do. By leveraging learning active recall and spaced repition, we aim to help people master the intuition behind solving programming problems.",
+      "A Duolingo-inspired mobile app created to teach how to solve coding problems and data structures & algorithms. This app was developed using React Native and Supabase and works on both Android and iOS. The goal of this app was to lower the barrier to entry for leetcode, which can be daunting as you might sit in front of a problem for 30 minutes wihtout knowing what to do. By leveraging learning active recall and spaced repition, we aim to help people master the intuition behind solving programming problems.",
     link: "https://algobytes.app/",
     githubLink: "",
-    technologies: ["React Native", "PostgreSQL", "SupaBase"],
+    technologies: ["React Native", "PostgreSQL", "Supabase"],
     thumbnail: "/AlgoBytes/AlgoBytesThumbnail.png",
     shortDescription:
       "A Duolingo-inspired mobile app created to teach how to solve coding problems and data structures & algorithms.",

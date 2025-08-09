@@ -1,7 +1,7 @@
-import "./ProjectInformation.css";
-import { useEffect, useState } from "react";
-import Technology from "../../Components/Technology/Technology";
-import Link from "../../Components/Link/Link";
+import { useEffect, useState } from 'react';
+import Link from '../../Components/Link/Link';
+import Technology from '../../Components/Technology/Technology';
+import './ProjectInformation.css';
 
 function ProjectInformation({ project }) {
   const [mediaIndex, setMediaIndex] = useState(0);
@@ -58,12 +58,13 @@ function ProjectInformation({ project }) {
               link={project.link}
               text="Website"
             />
-            {project.githubLink !== "" && 
+            {project.githubLink !== '' && (
               <Link
                 icon={<img src="github.svg" alt="GitHub" />}
                 link={project.githubLink}
                 text="GitHub"
-              />}
+              />
+            )}
           </div>
         </div>
         <p> {project.longDescription} </p>
