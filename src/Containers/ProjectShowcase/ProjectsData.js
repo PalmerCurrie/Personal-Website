@@ -17,8 +17,37 @@ export const ProjectData = [
   // shortDescription: "",
   // },
   {
-    title: "AlgoBytes",
+    title: "Pickwise Sports",
     id: 0,
+    mediaList: [
+      {
+        type: "image",
+        url: "/PickwiseSports/PickwiseThumbnail.png",
+        caption: "",
+      },
+      {
+        type: "image",
+        url: "/PickwiseSports/PickwiseAppHighlights.png",
+        caption: "App Highlights",
+      },
+      {
+        type: "image",
+        url: "/PickwiseSports/PickwiseFeatures.png",
+        caption: "App Features",
+      },
+    ],
+    longDescription:
+      "A mobile app providing real-time NBA data, AI-powered game predictions, and actionable insights for sports bettors. Built with React Native, FastAPI, and Supabase, Pickwise Sports brings advanced analytics directly to users through clean visuals and data-backed reasoning. The app centralizes player and team stats, injury reports, odds movement, and daily AI predictions, each paired with transparent explanations so users understand why a pick is suggested. Additional features include parlay analysis, community polls, and daily news summaries, creating an all-in-one platform for informed decision-making.",
+    link: "https://pickwisesports.app/",
+    githubLink: "",
+    technologies: ["XGBoost ML Model", "OpenAI API", "React Native", "PostgreSQL (Supabase)"],
+    thumbnail: "/PickwiseSports/PickwiseThumbnail.png",
+    shortDescription:
+      "A mobile app delivering real-time NBA data and AI-powered predictions with clear, data-backed insights."
+  },
+  {
+    title: "AlgoBytes",
+    id: 1,
     mediaList: [
       {
         type: "image",
@@ -47,7 +76,7 @@ export const ProjectData = [
   },
   {
     title: "Messaging App",
-    id: 1,
+    id: 2,
     mediaList: [
       {
         type: "image",
@@ -78,7 +107,7 @@ export const ProjectData = [
   },
   {
     title: "Shopping Cart",
-    id: 2,
+    id: 3,
     mediaList: [
       {
         type: "image",
@@ -108,7 +137,7 @@ export const ProjectData = [
   },
   {
     title: "NBA Wordle",
-    id: 3,
+    id: 4,
     mediaList: [
       {
         type: "image",
