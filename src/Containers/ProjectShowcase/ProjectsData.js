@@ -39,8 +39,8 @@ export const ProjectData = [
     longDescription:
       "A mobile app providing real-time NBA data, AI-powered game predictions, and actionable insights for sports bettors. Built with React Native, FastAPI, and Supabase, Pickwise Sports brings advanced analytics directly to users through clean visuals and data-backed reasoning. The app centralizes player and team stats, injury reports, odds movement, and daily AI predictions, each paired with transparent explanations so users understand why a pick is suggested. Additional features include parlay analysis, community polls, and daily news summaries, creating an all-in-one platform for informed decision-making.",
     link: "https://pickwisesports.app/",
-    githubLink: "",
-    technologies: ["XGBoost ML Model", "OpenAI API", "React Native", "PostgreSQL (Supabase)"],
+    githubLink: "", 
+    technologies: ["XGBoost ML Model", "OpenAI API", "PostgreSQL (Supabase)"],
     thumbnail: "/PickwiseSports/PickwiseThumbnail.png",
     shortDescription:
       "A mobile app delivering real-time NBA data and AI-powered predictions with clear, data-backed insights."
