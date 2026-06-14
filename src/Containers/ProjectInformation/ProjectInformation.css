@@ -1,13 +1,11 @@
 .project-information-container {
   border-radius: 40px;
   padding: 2.5%;
-  margin: 5%;
-  height: 75vh;
-  width: 66vw;
+  margin: clamp(3rem, 8vh, 6rem) 0;
+  width: var(--content-width);
   background-color: var(--secondary-background-color);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -17,7 +15,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 60%;
+  height: clamp(280px, 45vh, 480px);
   width: 80%;
 }
 
@@ -35,7 +33,7 @@
   color: white;
   font-size: 1.5vw;
   width: 3vw;
-  height: 1.5vw;
+  aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,9 +50,10 @@
 }
 
 .project-information {
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   text-align: left;
   font-size: 0.75rem;
   position: relative;
@@ -65,10 +64,6 @@
   margin-top: 5px;
   text-align: center;
   font-size: 0.95rem;
-}
-
-.caption-container {
-  height: 15%;
 }
 
 .project-name-container {
@@ -91,6 +86,10 @@
 .project-information p {
   font-size: clamp(0.95rem, 1.6vw, 1.2rem);
   line-height: 1.35;
+}
+
+.project-information > p {
+  margin: 0;
 }
 
 .project-information .caption {

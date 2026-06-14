@@ -3,8 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 66vw;
-  height: 25vw;
+  width: var(--content-width);
   min-height: 300px;
   background-color: var(--secondary-background-color);
   border-radius: 40px;
@@ -46,8 +45,9 @@
   margin-top: 1.5vw;
   margin-left: 5%;
   background-color: grey;
-  width: 17.5vw;
-  height: 17.5vw;
+  width: 70%;
+  aspect-ratio: 1;
+  max-width: 220px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -144,7 +144,8 @@
   .profile-picture-container {
     margin-top: 2.5vw;
     width: 40vw;
-    height: 40vw;
+    aspect-ratio: 1;
+    max-width: 180px;
   }
 
   .profile-picture {

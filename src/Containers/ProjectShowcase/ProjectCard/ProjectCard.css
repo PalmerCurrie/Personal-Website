@@ -1,9 +1,8 @@
 .project-card-container {
   border: 5px solid var(--secondary-background-color);
   background-color: var(--secondary-background-color);
-  width: 25vw;
-  height: 25vw;
-  margin-inline: 1vw;
+  width: 100%;
+  aspect-ratio: 1;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -24,6 +23,7 @@
 .project-image {
   height: 100%;
   width: 100%;
+  object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -35,18 +35,23 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  font-size: 0.95vw;
+  font-size: clamp(0.85rem, 1.1vw, 1.05rem);
   position: relative;
+  overflow: hidden;
 }
 
 .project-content h2 {
   margin: 0;
-  font-size: 1.5vw;
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
 }
 
 .project-content p {
   flex: 1;
   margin-top: 5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 .project-technologies {

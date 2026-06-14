@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2vw;
+  width: var(--content-width);
 }
 
 @media (max-width: 768px) {
@@ -9,6 +10,7 @@
   .projects-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 15px;
   }
 }

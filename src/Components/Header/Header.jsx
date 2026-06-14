@@ -94,7 +94,7 @@ function Header({
     return {
       width: `${Math.max(60, 100 - 66 * progress)}vw`,
       top: `${10 * progress}px`,
-      height: `${5.5 - progress}vh`,
+      height: `clamp(44px, ${5.5 - progress}vh, 72px)`,
       borderRadius: `${progress * 100}px`,
       backgroundColor: theme
         ? `rgba(35, 36, 40, ${1 - 0.05 * progress})`

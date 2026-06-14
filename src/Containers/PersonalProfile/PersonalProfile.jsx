@@ -12,8 +12,8 @@ function PersonalProfile() {
           <h1>Hi! I'm Palmer Currie</h1>
           <h2>Full-Stack Developer</h2>
           <p>
-            I’m a third-year Computer Science student at the University of
-            British Columbia and a passionate Full-Stack Web Developer
+            I’m a fourth-year Computer Science student at the University of
+            British Columbia and a passionate Full-Stack Developer
             specializing in React, TypeScript, and SQL. Outside of coding, I
             enjoy basketball, hockey, working out, and building creative
             projects. Check out my work or connect with me through the links in
