@@ -7,6 +7,19 @@ export default function ExperienceContainer() {
 
   const experiences = [
     {
+      imageSrc: '/aws-logo.png',
+      title: 'Software Development Engineer Intern',
+      company: 'Amazon Web Services (AWS | Elastic Kubernetes Service)',
+      date: 'May 2026 - Present',
+      details: [
+        'Engineered a conformance suite that executes 300+ upstream ArgoCD e2e tests against an EKS patched binary.',
+        'Eliminated manual environment setup by building a self-provisioning Go package with auto-healing credentials.',
+        'Prevented production regressions by adapting the upstream test harness to validate real multi-cluster routing.',
+        'Directed a multi-cluster architecture by authoring a design document evaluating trade-offs and success criteria.',
+        'Unblocked release cadences by executing a phased CI/CD pipeline rollout, securely gating future deployments.',
+      ],
+    },
+    {
       imageSrc: '/planview-logo.jpg',
       title: 'Junior Software Engineer',
       company: 'Planview (formerly Tasktop)',
